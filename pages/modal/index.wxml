@@ -1,0 +1,28 @@
+<view class="page">
+  <view class='pg_hd'>
+    <view class="pg_title">Modal</view>
+    <view class="pg_desc">
+      <text class='block'>Modal 仿小程序原生modal样式编写，可自由修改样式。</text>
+      <text class='block'>较之原生modal，新增了slot节点的支持（详见按钮"Slot Dialog")。</text>
+      <text class='block params'> 新增参数：</text>
+      <text>name:调用组件时传入，可设置为组件容器类样式，针对不同组件自定义样式。</text>      
+    </view>
+  </view>
+  <view class='pg_bd'>
+    <view class='btn_area'>
+      <button type="default" bindtap="openConfirm">Confirm Dialog</button>
+      <button type="default" bindtap="openAlert">Alert Dialog</button>      
+      <button type="default" bindtap="openSlot">Slot Dialog</button>
+    </view>
+  </view>
+  <!-- 调用modal组件 -->
+  <modal name="confirmModal" hidden="{{modalHidden}}" title="弹窗标题" content="弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内" cancelTxt="辅助操作" confirmTxt="主操作" bind:confirm="modalClickConfirm" bind:cancel="modalClickCancel" />
+  <modal name="alertModal" hidden="{{alertHidden}}" title="" showCancel="{{false}}" content="弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内" bind:confirm="alertConfirm" />
+  <modal name="slotModal" hidden="{{slotHidden}}" title="自定义内容模态框" showCancel="{{false}}" showConfirm="{{false}}" bind:confirm="alertConfirm">
+    <view class='slotModal'>
+      <text>如果你需要自定义一个蒙板弹窗，可以把原模态框的内容按钮都隐藏掉，使用自定义内容来进行展示。或者你也可以复用本组件的蒙板弹窗部分再创建一个仅有蒙板弹窗框架的组件，专门用来实现自定义内容的蒙板弹窗。</text>
+      <button type="default" class='showCoupon' hover-class="other-button-hover" bindtap="slotClickConfirm"> 主操作 </button>
+      <button type="default" class='wxgzh' hover-class="other-button-hover" bindtap="slotClickCancel"> 辅操作 </button>
+    </view>
+  </modal>
+</view>

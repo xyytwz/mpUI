@@ -1,0 +1,40 @@
+/* pages/modal/index.wxss */
+.btn_area{
+  margin:20px;
+}
+.btn_area button{
+  margin-bottom:20px;
+}
+/*自定义样式*/
+.slotModal text {
+  display: inline-block;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.slotModal button {
+  margin-top: 28rpx;
+  width: 400rpx;
+  height: 88rpx;
+  border-radius: 88rpx;
+  border: 2rpx solid #999;
+  color: #000;
+  font-size: 34rpx;
+  background: none;
+  line-height: 88rpx;
+}
+
+.slotModal button.showCoupon {
+  margin-top: 42rpx;
+}
+
+.slotModal button.wxgzh {
+  color: #f20136;
+  margin-bottom:10rpx;
+}
+/*表格*/
+.params{
+  font-weight: bold;
+  line-height: 2;
+  color: #000000;
+}

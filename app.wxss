@@ -1,0 +1,93 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+page {
+  font-size: 14px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.pg_hd {
+  padding: 20px;
+}
+
+.pg_title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.pg_desc {
+  margin-top: 5px;
+  color: #888;
+  text-align: left;
+}
+.weui-btn-area {
+  margin:1.17647059em 15px .3em;
+}
+.weui-btn,.weui-btn-area button {
+margin-top:15px;
+}
+
+
+/*布局定位*/
+.bold{font-weight:bold;}
+.block{display: block}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.flex_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+
+.flex_2 {
+  width: 50%;
+}
+
+.arrow {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #666;
+  transform: rotate(45deg);
+}
+
+.arrow_right {
+  border-left: 0;
+  border-bottom: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.relative {
+  position: relative;
+}
+
+.show,.block {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+/*文字样式*/
+.c_6{color:#666666;}
+.c_8{color:#888888;}

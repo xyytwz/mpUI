@@ -1,0 +1,21 @@
+<view class="page">
+  <view class='pg_hd'>
+    <view class="pg_title">Loading</view>
+    <view class="pg_desc">
+      <text class='block'>Loading 仿小程序原生Loading样式编写，可自由修改样式。</text>
+      <text class='block'>较之原生modal，新增了透明蒙板功能，即看不到的loading,在loading关闭之前，点击界面按钮是无法应的，可以控制触碰穿透。</text>
+    </view>
+  </view>
+  <view class='pg_bd'>
+    <view class='weui-btn-area'>
+      <button type="default" bindtap="showLoading">loading</button>
+      <button type="default" bindtap="showTransparentPop">透明蒙板防触控穿透</button>
+      <text class='block bold' style="margin-top:80rpx;">关于防触碰穿透：</text>
+      <text class='block c_8' style="margin-top:20rpx;">1. 如微信支付api，从调用api到弹出支付弹窗需要一定时间的，如果在这个过程中连续点击调用api的按钮，则按返回键关闭支付弹窗之后，有时还会重新调起支付弹窗的。</text>
+      <text class='block c_8' style="margin-top:20rpx;">2. 使用本文中的loading透明组件，可以控制到小程序api相关界面没有完全展示之前是无法点击按钮的。</text>
+      <text class='block c_8' style="margin-top:20rpx;">3. 之所以不用小程序showLoading，是因为小程序提供的loading展示也是需要一定时间的在loading完全加载之前的时间内，是无法起到防触碰穿透的，而这里的自定义loading加载的时间则小的多，几乎不影响。</text>
+    </view>
+  </view>
+  <!-- 调用loading组件 -->
+  <loading wx:if="{{loading}}" transparent="{{transparent}}" />
+</view>
